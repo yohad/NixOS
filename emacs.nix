@@ -16,6 +16,9 @@ let
       ;; Magit
       (global-set-key (kbd "C-x g") 'magit-status)
       (global-set-key (kbd "C-x M-x") 'magit-dispatch-popup)
+
+      ;; Org
+      (setq org-agenda-files '("~/org"))
       
       ;; General
       (setq tab-width 4)
