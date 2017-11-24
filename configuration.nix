@@ -19,10 +19,10 @@
     pkgs.stack
     pkgs.gnumake
     pkgs.gitAndTools.gitFull
-    pkgs.blas
-    pkgs.atlas
+    pkgs.hlint
+    pkgs.gfortran
 
-    (import /etc/nixos/emacs.nix { inherit pkgs; } )
+    (import /etc/nixos/emacs.nix { inherit pkgs; })
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.

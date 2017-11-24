@@ -12,6 +12,7 @@ let
     src = pkgs.writeText "default.el" ''
       ;; Haskell
       (add-hook 'haskell-mode-hook 'intero-mode)
+      (add-hook 'haskell-mode-hook 'flymake-hlint-load)
 
       ;; Magit
       (global-set-key (kbd "C-x g") 'magit-status)
@@ -33,6 +34,7 @@ in
     magit
     intero
     flycheck
+    flymake-hlint
     nix-mode
     fountain-mode
   ]) ++ (with epkgs.melpaPackages; [
