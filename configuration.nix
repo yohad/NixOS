@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -16,6 +16,8 @@
 
   environment.systemPackages = [
     pkgs.wget
+    (lib.getDev pkgs.pcre)
+    pkgs.pkgconfig
     pkgs.stack
     pkgs.gnumake
     pkgs.gitAndTools.gitFull
@@ -34,10 +36,9 @@
     uid = 1000;
   };
 
-  # The NixOS release to be compatible with for stateful data such as databases.
-  system.stateVersion = "17.03";
-
   services.xserver.enable = true;
   services.xserver.layout = "us";
   services.xserver.desktopManager.plasma5.enable = true;
+
+  system.autoUpgrade.enable = true;
 }
