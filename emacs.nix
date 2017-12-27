@@ -37,6 +37,8 @@ in
     flymake-hlint
     nix-mode
     fountain-mode
+    yaml-mode
+    flymake-yaml
   ]) ++ (with epkgs.melpaPackages; [
     undo-tree
   ]) ++ (with epkgs.elpaPackages; [

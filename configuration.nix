@@ -16,13 +16,12 @@
 
   environment.systemPackages = [
     pkgs.wget
-    (lib.getDev pkgs.pcre)
     pkgs.pkgconfig
     pkgs.stack
     pkgs.gnumake
     pkgs.gitAndTools.gitFull
     pkgs.hlint
-    pkgs.gfortran
+    pkgs.wxGTK30
 
     (import /etc/nixos/emacs.nix { inherit pkgs; })
   ];
