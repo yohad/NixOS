@@ -26,7 +26,8 @@ let
       (setq-default indent-tabs-mode nil)
 
       ;; File Recovery
-      (setq backup-directory-alist `(("." . "~/.saves")))
+      (setq backup-directory-alist `((".*" . "~/.saves")))
+
     '';
   };      
 in
@@ -38,7 +39,6 @@ in
     nix-mode
     fountain-mode
     yaml-mode
-    flymake-yaml
   ]) ++ (with epkgs.melpaPackages; [
     undo-tree
   ]) ++ (with epkgs.elpaPackages; [

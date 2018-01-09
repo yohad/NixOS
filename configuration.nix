@@ -21,8 +21,9 @@
     pkgs.gnumake
     pkgs.gitAndTools.gitFull
     pkgs.hlint
-    pkgs.wxGTK30
+    pkgs.inetutils
 
+    pkgs.python
     (import /etc/nixos/emacs.nix { inherit pkgs; })
   ];
 
@@ -38,6 +39,8 @@
   services.xserver.enable = true;
   services.xserver.layout = "us";
   services.xserver.desktopManager.plasma5.enable = true;
-
+  services.xserver.resolutions = [ {x = 1920; y = 1080;} ];
   system.autoUpgrade.enable = true;
+
+  
 }
